@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     margin: 0;
     padding: 0;
@@ -34,21 +38,20 @@ button {
     margin: 8px;
 }
 
-/* #recentSearches {
+#recentSearches {
     margin-top: 10px;
-} */
-.search-bar {
+}
+
+/* .search-bar {
     position: relative;
     width: fit-content;
     display: flex;
     align-items: center;
     gap: 5px;
-}
+} */
 
 #searchList {
-    position: absolute;
-    top: 0%;
-    left: 0;
+    display: flexbox;
     list-style-type: none;
     margin: 8px;
     padding: 10px;

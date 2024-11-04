@@ -44,21 +44,6 @@ function saveToRecentSearches(city) {
   }
 }
 
-document.getElementById("cityInput").addEventListener("focus", () => {
-  const searchList = document.getElementById("searchList");
-  if (searchList.children.length > 0) {
-    searchList.style.display = "inline-block";
-  }
-});
-
-document.addEventListener("click", (event) => {
-  const searchList = document.getElementById("searchList");
-  const cityInput = document.getElementById("cityInput");
-  if (!cityInput.contains(event.target) && !searchList.contains(event.target)) {
-    searchList.style.display = "none";
-  }
-});
-
 function loadRecentSearches() {
   const searchList = document.getElementById("searchList");
 
@@ -72,7 +57,6 @@ function loadRecentSearches() {
     li.addEventListener("click", () => {
       document.getElementById("cityInput").value = city;
 
-      searchList.style.display = "none";
       getWeather();
     });
 
